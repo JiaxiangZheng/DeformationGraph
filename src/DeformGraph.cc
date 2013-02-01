@@ -388,3 +388,7 @@ void deform_graph::save_ply(const char* filename) {
 	}
 	fclose(fp);
 }
+
+void optimize(TriMesh& input_mesh, const TriMesh& target_mesh) {
+	
+}
