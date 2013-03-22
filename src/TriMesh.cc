@@ -102,6 +102,7 @@ void TriMesh::render(DisplayMode mode)
 
 void TriMesh::updateNorm()
 {
+	norm_coord.clear();	face_norm.clear();
 	norm_coord.resize(vert_num);
 	face_norm.reserve(poly_num);
 	for (int i=0; i<vert_num; ++i)
