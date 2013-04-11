@@ -34,6 +34,7 @@ public:
 	void render(DisplayMode mode);
 	void prepareFaceNeighbours(std::vector<std::vector<int>>& neighbours);
 	void saveOBJ(const char* filename);
+	void savePLY(const char* filename);
 	void getBoundingBox(Eigen::Vector3d& Min, Eigen::Vector3d& Max);
 private:
 	void readPLY(const char* filename);

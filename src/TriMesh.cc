@@ -283,6 +283,38 @@ void TriMesh::saveOBJ(const char* filename)
 	fclose(fp);
 	return;
 }
+void TriMesh::savePLY(const char* filename) {
+	if (this->norm_coord.empty()) {		
+        fprintf(stderr, "error : make sure the normal is not empty.\n");
+        return;
+	}
+	FILE* fp = fopen(filename, "w");
+    if (!fp) {
+        fprintf(stderr, "warning : unable to open %s when saving pcd to ply file.\n", filename);
+        return;
+    }
+    fprintf(fp, "ply\n");
+    fprintf(fp, "format ascii 1.0\n");
+    fprintf(fp, "element vertex %d\n", vertex_coord.size());
+    fprintf(fp, "property float x\n");
+    fprintf(fp, "property float y\n");
+    fprintf(fp, "property float z\n");
+    fprintf(fp, "property float nx\n");
+    fprintf(fp, "property float ny\n");
+    fprintf(fp, "property float nz\n");
+    fprintf(fp, "property uchar red\n");
+    fprintf(fp, "property uchar green\n");
+    fprintf(fp, "property uchar blue\n");
+    fprintf(fp, "end_header\n");
+    
+    for (size_t i=0; i<vertex_coord.size(); ++i) {
+        fprintf(fp, "%f %f %f %f %f %f %d %d %d\n", 
+            vertex_coord[i][0], vertex_coord[i][1], vertex_coord[i][2],
+            norm_coord[i][0], norm_coord[i][1], norm_coord[i][2],
+            0, 255, 255);
+    }
+    fclose(fp);
+}
 void TriMesh::getBoundingBox(Vector3d& Min, Vector3d& Max)
 {
 	const double LIMIT_MAX = numeric_limits<double>::max();
