@@ -11,12 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\DeformGraph.cc" />
-    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\DeformGraph.cpp" />
+    <ClCompile Include="src\DeformGraphTest.cpp" />
     <ClCompile Include="src\TriMesh.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\DeformGraph.hpp" />
+    <ClInclude Include="src\DeformGraph.h" />
     <ClInclude Include="src\TriMesh.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

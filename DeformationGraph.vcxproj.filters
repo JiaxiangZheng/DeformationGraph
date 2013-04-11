@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\DeformGraph.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\TriMesh.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DeformGraph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DeformGraphTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\DeformGraph.hpp">
+    <ClInclude Include="src\TriMesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\TriMesh.h">
+    <ClInclude Include="src\DeformGraph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
